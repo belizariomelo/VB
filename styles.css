@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background-color:rgb(237, 228, 228);
+}
+.card {
+    width: 350px;
+    height: 250px;
+    background-color: #e5dbdb;
+    text-align: center;
+    border: 5px solid #939292;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+  }
+  .imagem{
+    width: 160px;
+    height: 210px;
+    border-radius: 10% 20% 10% 20%;
+  }
+  .card:hover {
+    height: 720px;
+    width: 500px;
+  }
+  
+ .title{
+    margin-bottom: -10px;
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: #5e5959;
+ }
+  .icon {
+    width: 160px;
+    height: 210px;
+    color: red;
+    font-size: 30px;
+    background-color: #b6b2b2;
+    margin: 18px auto;
+    padding: 5px;
+    border-radius: 10% 20% 10% 20%;
+    
+  }
+  li{
+    font-size: 1.01rem;
+    font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+    color: #858383;
+    margin-top: -5px;
+    padding: 7px;
+    margin-left: 25px;
+    list-style: disc;
+  
+  }
+  
+  ul{
+    list-style: none;
+    text-align: justify;
+    padding: 20px;
+  }
+  .content {
+    height: 420px;
+    color: #999;
+    background-color: rgb(218, 211, 211);
+    padding: 10px;
+    margin: 5px 20px;
+    border-radius: 8px;
+  
+    transform: translateY(-80px) scale(0);
+    transition: all 0.5s;
+  }
+  
+  .card:hover .content {
+    transform: translateY(0) scale(1)
+  }
+  
+  .content h3 {
+    text-shadow: 2px 2px 0px #fff;
+  }
+  .buton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  button {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e8e8e8;
+   
+  
+    text-decoration: none;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(134, 124, 124);
+    font-family: monospace;
+    transition: transform 400ms cubic-bezier(.68,-0.55,.27,2.5), 
+    border-color 400ms ease-in-out,
+    background-color 400ms ease-in-out;
+    
+  }
+  
+  @keyframes movingBorders {
+    0% {
+      border-color: #fce4e4;
+    }
+  
+    50% {
+      border-color: #ffd8d8;
+    }
+  
+    90% {
+      border-color: #fce4e4;
+    }
+  }
+  
+  button:hover {
+    background-color: #eee;
+    transform: scale(100%);
+    animation: movingBorders 3s infinite;
+  }
+  
+  button svg {
+    margin-right: 5px;
+    fill: rgb(255, 110, 110);
+    transition: opacity 100ms ease-in-out;
+  }
+  
+  .filled {
+    position: absolute;
+    opacity: 0;
+   
+    left: 5px;
+  }
+ 
+  
+  button:hover .empty {
+    opacity: 0;
+  }
+  
+  button:hover .filled {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+  }
